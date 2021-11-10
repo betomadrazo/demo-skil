@@ -10,7 +10,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Hola Beto, qué chin gón eres.';
+        const speakOutput = 'Hola Beto, qué chin gón eres ¡Simón!';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)

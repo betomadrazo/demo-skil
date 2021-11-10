@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "prueba testa",
+      "invocati onName": "kokora sos",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",

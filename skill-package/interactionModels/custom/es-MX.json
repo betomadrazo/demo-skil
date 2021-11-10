@@ -31,10 +31,24 @@
         {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
+        },
+        {
+          "name": "TimeOfDayGuarroIntent",
+          "slots": [],
+          "samples": [
+            "dame la hora"
+          ]
+        },
+        {
+          "name": "TelocicoIntent",
+          "slots": [],
+          "samples": [
+            "qué pelo"
+          ]
         }
       ],
       "types": []
     }
   },
-  "version": "1"
+  "version": "2"
 }

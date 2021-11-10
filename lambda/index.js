@@ -19,13 +19,28 @@ const LaunchRequestHandler = {
     }
 };
 
+const TelocicoIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest' &&
+            Alexa.getIntentName(handlerInput.requestEnvelope.intentName) === 'TelocicoIntent';
+    },
+    handle(handlerInput) {
+        const speakOutput = 'telocico, te apest amier da';
+
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            // .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
 const HelloWorldIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'HelloWorldIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Hello World!';
+        const speakOutput = '¡Qué loco!';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -143,13 +158,15 @@ const ErrorHandler = {
  * */
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
+        TelocicoIntentHandler,
         LaunchRequestHandler,
         HelloWorldIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
         SessionEndedRequestHandler,
-        IntentReflectorHandler)
+        IntentReflectorHandler,
+    )
     .addErrorHandlers(
         ErrorHandler)
     .withCustomUserAgent('sample/hello-world/v1.2')

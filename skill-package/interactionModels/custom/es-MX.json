@@ -4,6 +4,21 @@
       "invocationName": "días negros",
       "intents": [
         {
+          "name": "TimeOfDayGuarroIntent",
+          "slots": [],
+          "samples": [
+            "dame la hora",
+            "dime la hora"
+          ]
+        },
+        {
+          "name": "TelocicoIntent",
+          "slots": [],
+          "samples": [
+            "qué pelo"
+          ]
+        },
+        {
           "name": "AMAZON.CancelIntent",
           "samples": []
         },
@@ -31,20 +46,6 @@
         {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
-        },
-        {
-          "name": "TimeOfDayGuarroIntent",
-          "slots": [],
-          "samples": [
-            "dame la hora"
-          ]
-        },
-        {
-          "name": "TelocicoIntent",
-          "slots": [],
-          "samples": [
-            "qué pelo"
-          ]
         }
       ],
       "types": []

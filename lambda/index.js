@@ -10,8 +10,13 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Hola Beto, qué chin gón eres ¡Simón!';
-
+        const speakOutput = 'Hola Beto, buenos días.';
+        console.log("#################### KALINKA! ###########################");
+        console.log("#################### KALINKA! ###########################");
+        console.log("#################### KALINKA! ###########################");
+        console.log("#################### KALINKA! ###########################");
+        console.log("#################### KALINKA! ###########################");
+        console.log("#################### KALINKA! ###########################");
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
@@ -32,6 +37,24 @@ const TelocicoIntentHandler = {
             // .reprompt(speakOutput)
             .getResponse();
     }
+};
+
+const TimeOfDayGuarroIntentHandler = {
+  canHandle(handlerInput) {
+    console.log("########################## ooooh ");
+
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'TimeOfDayGuarroIntent';
+  },
+  handle(handlerInput) {
+    console.log("A HUEVO!!!");
+    const output = 'Y tú dame la por onga';
+    return handlerInput.responseBuilder
+      .speak(output)
+      //.withSimpleCard('ojo', output)
+      //.reprompt('come camote')
+      .getResponse();
+  }
 };
 
 const HelloWorldIntentHandler = {
@@ -141,7 +164,7 @@ const ErrorHandler = {
         return true;
     },
     handle(handlerInput, error) {
-        const speakOutput = 'Sorry, I had trouble doing what you asked. Please try again.';
+        const speakOutput = 'No te entiendo ni martes.';
         console.log(`~~~~ Error handled: ${JSON.stringify(error)}`);
 
         return handlerInput.responseBuilder
@@ -158,8 +181,9 @@ const ErrorHandler = {
  * */
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
-        TelocicoIntentHandler,
         LaunchRequestHandler,
+        TimeOfDayGuarroIntentHandler,
+        TelocicoIntentHandler,
         HelloWorldIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,

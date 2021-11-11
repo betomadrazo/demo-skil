@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "días negros",
+      "invocationName": "super coppel",
       "intents": [
         {
           "name": "TimeOfDayGuarroIntent",

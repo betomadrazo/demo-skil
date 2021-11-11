@@ -8,14 +8,8 @@
           "slots": [],
           "samples": [
             "dame la hora",
-            "dime la hora"
-          ]
-        },
-        {
-          "name": "TelocicoIntent",
-          "slots": [],
-          "samples": [
-            "qué pelo"
+            "dime la hora",
+            "qué hora es"
           ]
         },
         {

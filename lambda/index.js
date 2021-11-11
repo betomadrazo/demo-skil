@@ -11,12 +11,8 @@ const LaunchRequestHandler = {
     },
     handle(handlerInput) {
         const speakOutput = 'Hola Beto, buenos días.';
-        console.log("#################### KALINKA! ###########################");
-        console.log("#################### KALINKA! ###########################");
-        console.log("#################### KALINKA! ###########################");
-        console.log("#################### KALINKA! ###########################");
-        console.log("#################### KALINKA! ###########################");
-        console.log("#################### KALINKA! ###########################");
+        console.log("#################### EMPIEZA SKILL! ###########################");
+
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
@@ -24,35 +20,18 @@ const LaunchRequestHandler = {
     }
 };
 
-const TelocicoIntentHandler = {
-    canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest' &&
-            Alexa.getIntentName(handlerInput.requestEnvelope.intentName) === 'TelocicoIntent';
-    },
-    handle(handlerInput) {
-        const speakOutput = 'telocico, te apest amier da';
-
-        return handlerInput.responseBuilder
-            .speak(speakOutput)
-            // .reprompt(speakOutput)
-            .getResponse();
-    }
-};
-
 const TimeOfDayGuarroIntentHandler = {
   canHandle(handlerInput) {
-    console.log("########################## ooooh ");
+    console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ TimeOfDayGuarroIntent ");
 
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'TimeOfDayGuarroIntent';
   },
   handle(handlerInput) {
-    console.log("A HUEVO!!!");
-    const output = 'Y tú dame la por onga';
+    console.log("A HUEVO!");
+    const output = 'Es hora de que te pongas a trabajar';
     return handlerInput.responseBuilder
       .speak(output)
-      //.withSimpleCard('ojo', output)
-      //.reprompt('come camote')
       .getResponse();
   }
 };

@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "kokora sos",
+      "invocationName": "días negros",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
